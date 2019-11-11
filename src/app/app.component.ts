@@ -25,6 +25,12 @@ export class AppComponent {
         }
         break;
       case 'wilds':
+        if (this.wildService.currentIndex==0 && ev==-1)
+          this.wildService.currentIndex = 4;
+        else {
+          this.wildService.currentIndex = (ev + this.wildService.currentIndex) % 5;
+          this.wildService.currentWild = this.wildService.wilds[this.wildService.currentIndex];
+        }
         break;
       // case 'domestics':
       //   break;

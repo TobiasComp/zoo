@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class WildService {
 
   wilds: Wild[] = [];
-  currentWildIndex = 0;
+  currentIndex = 0;
   currentWild:Wild;
 
   constructor(private http:HttpClient) { 

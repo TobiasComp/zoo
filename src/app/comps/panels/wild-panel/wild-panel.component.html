@@ -1,1 +1,15 @@
-<p>wild-panel works!</p>
+<h1>Welcome to the Safari</h1>
+
+<div class="flex">
+    <div>
+        <h2>our wilds list</h2>
+        <ul>
+            <li *ngFor = "let wild of wildService.wilds">{{wild.name}}</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <app-wild-card></app-wild-card>
+    </div>
+</div>

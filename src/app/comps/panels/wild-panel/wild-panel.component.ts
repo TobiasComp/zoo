@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WildService } from '../../../services/wild.service';
 
 @Component({
   selector: 'app-wild-panel',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WildPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(public wildService: WildService) { }
 
   ngOnInit() {
   }
