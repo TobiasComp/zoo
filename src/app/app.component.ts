@@ -10,10 +10,13 @@ import { WildService } from './services/wild.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'Avrazoo';
+  
   constructor(public paging:PagingService, public birdService:BirdService, public domesticService: DomesticService,
     public wildService: WildService ){}
-  changeItem(ev){
+  
+    changeItem(ev){
     console.log("change item evoked",ev)
     switch(this.paging.currentPanel){
       case 'birds':
@@ -32,8 +35,14 @@ export class AppComponent {
           this.wildService.currentWild = this.wildService.wilds[this.wildService.currentIndex];
         }
         break;
-      // case 'domestics':
-      //   break;
+      case 'domestics':
+        if (this.domesticService.currentIndex==0 && ev==-1)
+          this.domesticService.currentIndex = 4;
+        else {
+          this.domesticService.currentIndex = (ev + this.domesticService.currentIndex) % 5;
+          this.domesticService.currentDomestic = this.domesticService.domestics[this.domesticService.currentIndex];
+      }
+        break;
     }
     
     

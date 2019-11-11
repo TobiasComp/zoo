@@ -1,1 +1,15 @@
-<p>domestic-panel works!</p>
+<h1>Welcome to the Farm</h1>
+
+<div class="flex">
+    <div>
+        <h2>our Farm list</h2>
+        <ul>
+            <li *ngFor = "let domestic of domesticService.domestics">{{domestic.name}}</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <app-domestic-card></app-domestic-card>
+    </div>
+</div>

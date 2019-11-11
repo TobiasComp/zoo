@@ -1,1 +1,8 @@
-<p>domestic-card works!</p>
+<!-- <p>domestic-card works!</p> -->
+<div>
+        <h3>{{domesticService.currentDomestic.name }}</h3>
+        <div>size: {{ domesticService.currentDomestic.size }}</div>
+        <div>lifeSpan: {{ domesticService.currentDomestic.lifeSpan }}</div>
+        <div>habitat: {{ domesticService.currentDomestic.habitat }}</div>
+        <img [src]="domesticService.currentDomestic.img" alt="">
+</div>

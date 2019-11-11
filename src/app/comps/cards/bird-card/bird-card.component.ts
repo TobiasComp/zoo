@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BirdService } from '../../../services/bird.service';
+import { DomesticCardComponent } from '../domestic-card/domestic-card.component';
 
 @Component({
   selector: 'app-bird-card',

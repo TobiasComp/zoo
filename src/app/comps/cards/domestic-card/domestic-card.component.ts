@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomesticService } from '../../../services/domestic.service';
 
 @Component({
   selector: 'app-domestic-card',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DomesticCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public domesticService:DomesticService) { }
 
   ngOnInit() {
   }
