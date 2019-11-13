@@ -1,9 +1,11 @@
 <app-header></app-header>
 
-<app-domestic-panel *ngIf = "paging.currentPanel =='domestics' "></app-domestic-panel>
+<!-- <app-domestic-panel *ngIf = "paging.currentPanel =='domestics' "></app-domestic-panel>
 <app-wild-panel *ngIf = "paging.currentPanel =='wilds' "></app-wild-panel>
-<app-bird-panel *ngIf = "paging.currentPanel =='birds' "></app-bird-panel>
+<app-bird-panel *ngIf = "paging.currentPanel =='birds' "></app-bird-panel> -->
+<router-outlet></router-outlet>
 
 
 <app-paginator (moveItemEvent) ="changeItem($event)"></app-paginator>
+
 <app-footer></app-footer>

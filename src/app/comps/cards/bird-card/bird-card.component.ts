@@ -9,7 +9,9 @@ import { DomesticCardComponent } from '../domestic-card/domestic-card.component'
 })
 export class BirdCardComponent implements OnInit {
 
-  constructor(public birdService:BirdService) { }
+  constructor(public birdService:BirdService) {
+    
+   }
 
   ngOnInit() {
   }

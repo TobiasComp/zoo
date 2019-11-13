@@ -1,7 +1,11 @@
 <div>
-    <ul>
-        <li (click) = "navTo('domestics')">Domestic </li>
+    <ul class="nav-ul">
+        <!-- <li (click) = "navTo('domestics')">Domestic </li>
         <li (click) = "navTo('wilds')">Wild </li>
-        <li (click) = "navTo('birds')">Birds </li>
+        <li (click) = "navTo('birds')">Birds </li> -->
+        <li> <a routerLink="/birds" routerLinkActive="active">Bird</a></li>
+        <li> <a routerLink="/wilds" routerLinkActive="active">wild</a></li>
+        <li> <a routerLink="/domestics" routerLinkActive="active">Domestic</a></li>
     </ul>
+    
 </div>

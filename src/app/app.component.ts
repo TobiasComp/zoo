@@ -3,6 +3,7 @@ import { PagingService } from './services/paging.service';
 import { BirdService } from './services/bird.service';
 import { DomesticService } from './services/domestic.service';
 import { WildService } from './services/wild.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,11 @@ export class AppComponent {
   title = 'Avrazoo';
   
   constructor(public paging:PagingService, public birdService:BirdService, public domesticService: DomesticService,
-    public wildService: WildService ){}
+    public wildService: WildService) {}
   
     changeItem(ev){
-    console.log("change item evoked",ev)
-    switch(this.paging.currentPanel){
+
+      switch(window.location.pathname.substring(1,)){
       case 'birds':
         if (this.birdService.currentIndex==0 && ev==-1)
           this.birdService.currentIndex = 4;

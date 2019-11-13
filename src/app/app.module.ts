@@ -13,7 +13,18 @@ import { BirdPanelComponent } from './comps/panels/bird-panel/bird-panel.compone
 import { BirdCardComponent } from './comps/cards/bird-card/bird-card.component';
 import { WildCardComponent } from './comps/cards/wild-card/wild-card.component';
 import { DomesticCardComponent } from './comps/cards/domestic-card/domestic-card.component';
+import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './comps/general/page-not-found/page-not-found.component';
 
+const appRoutes: Routes = [
+  { path: 'birds', component: BirdPanelComponent },
+  { path: 'wilds', component: WildPanelComponent },
+  { path: 'domestics', component: DomesticPanelComponent,  },
+  { path: '',
+    redirectTo: '/birds',
+    pathMatch: 'full'
+  }, { path: '**', component: PageNotFoundComponent} 
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,10 +37,11 @@ import { DomesticCardComponent } from './comps/cards/domestic-card/domestic-card
     BirdPanelComponent,
     BirdCardComponent,
     WildCardComponent,
-    DomesticCardComponent
+    DomesticCardComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule, HttpClientModule, RouterModule.forRoot( appRoutes )
   ],
   providers: [],
   bootstrap: [AppComponent]
