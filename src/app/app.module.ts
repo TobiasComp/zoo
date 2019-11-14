@@ -25,6 +25,7 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   }, { path: '**', component: PageNotFoundComponent} 
 ];
+
 @NgModule({
   declarations: [
     AppComponent,

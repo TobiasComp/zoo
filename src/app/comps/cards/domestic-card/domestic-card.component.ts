@@ -12,5 +12,5 @@ export class DomesticCardComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

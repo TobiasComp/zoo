@@ -13,4 +13,14 @@ export class BirdPanelComponent implements OnInit {
   ngOnInit() {
   }
 
+  // navBird(name:string){
+  //     let index=0;
+  //     this.birdService.birds.forEach(bird => {
+  //       if (bird.name==name){
+  //         this.birdService.currentIndex = index;
+  //         this.birdService.currentBird = this.birdService.birds[this.birdService.currentIndex];
+  //       }
+  //     index++;
+  //     });
+  // }
 }
