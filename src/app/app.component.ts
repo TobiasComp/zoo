@@ -19,7 +19,8 @@ export class AppComponent {
   
     changeItem(ev){
 
-      switch(window.location.pathname.substring(1,)){
+      // switch(window.location.pathname.substring(1,)){
+    switch(this.paging.currentPanel){
       case 'birds':
         if (this.birdService.currentIndex==0 && ev==-1)
           this.birdService.currentIndex = 4;

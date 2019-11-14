@@ -16,15 +16,15 @@ import { DomesticCardComponent } from './comps/cards/domestic-card/domestic-card
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './comps/general/page-not-found/page-not-found.component';
 
-const appRoutes: Routes = [
-  { path: 'birds', component: BirdPanelComponent },
-  { path: 'wilds', component: WildPanelComponent },
-  { path: 'domestics', component: DomesticPanelComponent,  },
-  { path: '',
-    redirectTo: '/birds',
-    pathMatch: 'full'
-  }, { path: '**', component: PageNotFoundComponent} 
-];
+// const appRoutes: Routes = [
+//   { path: 'birds', component: BirdPanelComponent },
+//   { path: 'wilds', component: WildPanelComponent },
+//   { path: 'domestics', component: DomesticPanelComponent,  },
+//   { path: '',
+//     redirectTo: '/birds',
+//     pathMatch: 'full'
+//   }, { path: '**', component: PageNotFoundComponent} 
+// ];
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule.forRoot( appRoutes )
+    BrowserModule, HttpClientModule
+    // , RouterModule.forRoot( appRoutes )
   ],
   providers: [],
   bootstrap: [AppComponent]
